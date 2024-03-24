@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     div {
+            display: inline-block;
+            height: 25px;
+            line-height: 25px;
+            margin: 5px;
+            background-color: skyblue;
+            padding: 0 10px;
+            border: 1px solid #fff;
+        }
+</style>
+<body>
+    <script>
+        // function，是被设计为执行特定任务的代码块
+        // 可以实现代码复用，提高开发效率
+        function fn() {
+            for (let j = 1; j <= 9; j++) {
+                for (let i = 1; i <= j; i++) {
+                    document.write(`
+                    <div>
+                        ${i}✕${j}=${i*j}
+                    </div>
+                    `)
+                }
+            document.write(`<br>`)
+            }
+        }
+        fn()
+        fn()
+    </script>
+</body>
+</html>

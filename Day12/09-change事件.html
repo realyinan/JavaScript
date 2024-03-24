@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type] {
+            background-color: red;
+        }
+
+        input[type=text] {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+    <input type="password">
+    <script>
+        // change事件 当表单里面的值发生变化的时候触发和blur注意区分
+        // input事件 只要输入就会触发
+        let input = document.querySelector('input')
+        input.addEventListener('change', function() {
+            console.log(111)
+        })
+    </script>
+</body>
+</html>

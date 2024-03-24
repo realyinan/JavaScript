@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>第一个</li>
+    </ul>
+    <script>
+        // 创建节点 即创造出一个新的网页元素，再添加到网页内，一般先创建节点，然后插入节点
+        // 1.创建新的标签节点
+        let div = document.createElement('div')
+        let li = document.createElement('li')
+        li.innerHTML = '第二个'
+        let li_1 = document.createElement('li')
+        li_1.innerHTML = '插入'
+        
+
+        // 2.插入节点
+        let ul = document.querySelector('ul')
+        // 插入到父元素的最后一个子元素
+        ul.appendChild(li)
+        // 插入到父元素的某个元素前面
+        ul.insertBefore(li_1, li)
+
+
+    </script>
+</body>
+</html>

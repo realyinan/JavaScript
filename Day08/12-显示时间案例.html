@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin-top: 300px;
+            text-align: center;
+            font-family: 楷体;
+            font-size: 60px;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 需求：将当前时间以：YYYY-MM-DD HH:mm 形式显示在页面
+        let arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六', ]
+        function getTime() {
+            let date = new Date()
+            let year = date.getFullYear()
+            let month = date.getMonth() + 1 // 返回的是0-11的数
+            let date_1 = date.getDate()
+            let day = date.getDay()
+            let hour = date.getHours()
+            let minutes = date.getMinutes()
+            let seconds = date.getSeconds()
+            seconds = seconds < 10 ? '0' + seconds :seconds
+            let div = document.querySelector('div')
+            div.innerHTML = `${year}年${month}月${date_1}日 ${arr[day]} ${hour}:${minutes}:${seconds} `
+        }
+        getTime()
+        setInterval(getTime, 1000)
+    </script>
+</body>
+</html>

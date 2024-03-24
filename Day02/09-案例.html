@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 需求：用户输入一个，判断这个数能被4整除，但是不能被100整除
+        let num = prompt('请输入一个数字：')
+        num = num || 0
+        console.log(num);
+        console.log(num%4 === 0 && num%100  !== 0)
+    </script>
+</body>
+</html>

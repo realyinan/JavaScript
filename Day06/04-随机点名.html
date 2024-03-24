@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 150px;
+            height: 30px;
+            border: 1px solid pink;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    抽中的选手: <div></div>
+    <script>
+        // 获取元素
+        let box = document.querySelector('div')
+
+        // 随机数函数
+        function getRandom(N, M) {
+            return Math.floor(Math.random() * (M - N + 1)) + N
+        }
+
+        // 声明一个数组
+        let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操']
+        
+        // 写入标签内部
+        let random = getRandom(0, arr.length-1)
+        box.innerHTML = arr[random]
+
+        arr.splice(random, 1)
+    </script>
+</body>
+</html>

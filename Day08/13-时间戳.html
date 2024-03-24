@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 时间戳是指1970年01月01日00时00分00秒起至现在的毫秒数，是独一无二的，它是一种特殊的计量时间的方式
+        // 1.getTime()
+        let date = new Date()
+        console.log(date.getTime())
+        // 2.简写 +new Date() 推荐用这个
+        console.log(+new Date())
+        console.log(+new Date('2025-10-25 18:30:00'))
+        // 3.只能得到当前的
+        console.log(Date.now())
+    </script>
+</body>
+</html>

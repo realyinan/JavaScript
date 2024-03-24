@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        粉红色的盒子
+    </div>
+    <script>
+        // 1. document.write()
+        // 只能将文本内容追加到 </body> 前面的位置
+        // 文本中包含的标签会被解析
+        // 获取标签(元素)
+        let box = document.querySelector('div')
+
+        // 元素innerText属性 将文本内容添加/更新到任意标签位置  文本中包含的标签不会被解析
+        box.innerText = '<strong>绿色盒子</strong>'
+
+        // 元素.innerHTML属性 将文本内容添加/更新到任意标签位置 文本中包含的标签会被解析
+        box.innerHTML = '<strong>红色盒子</strong>'
+    </script>
+</body>
+</html>

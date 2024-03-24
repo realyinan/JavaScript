@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/1.webp" alt="刘德华">
+    <script>
+        // 获取图片素材
+        let pic = document.querySelector('img')
+        // 随机得到图片序号
+        function getRandom(N, M) {
+            return Math.floor(Math.random() * (M - N + 1)) + N
+        }
+        let num = getRandom(1, 6)
+        // 完成 src 属性赋值
+        pic.src = `./images/${num}.webp`
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/tianshi.gif" alt="">
+    <script>
+        // 需求：一张图片一直跟着鼠标移动
+        // 分析：不断把鼠标在页面中的坐标位置给图片left和top值即可
+        // 获取元素
+        let img = document.querySelector('img')
+        document.addEventListener('mousemove', function (e) {
+            // console.log(e.pageX)
+            // console.log(e.pageY)
+            img.style.left = e.pageX-40 + 'px'
+            img.style.top = e.pageY-40 + 'px'
+        })
+
+    </script>
+</body>
+</html>

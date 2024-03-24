@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            name: '小明',
+            age: 18
+        }
+        // 查
+        console.log(obj.name)
+        // 改
+        obj.age = 19
+        console.log(obj.age)
+        // 增 如果有重新赋值， 如果没有新增属性。
+        obj.sex = '男'
+        console.log(obj)
+        obj.sing = function () {
+            console.log(`唱歌`)
+        }
+        console.log(obj)
+        console.dir(obj
+        
+        )
+        // 删 了解
+        delete obj.name
+        console.log(obj)
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="forward">前进</button>
+    <button class="back">后退</button>
+    <script>
+        // history 的数据类型是对象，该对象与浏览器地址栏的操作相对应，如前进、后退、历史记录等
+        // 常用的属性和方法 back() forward() go()(参数如果是1前进一个页面，如果是-1后退一个页面)
+        let qianjin = document.querySelector('.forward')
+        let houtui = document.querySelector('.back')
+        qianjin.addEventListener('click', function () {
+            // history.forward()
+            history.go(1)
+        })
+        houtui.addEventListener('click', function () {
+            // history.back()
+            history.go(-1)
+        })
+    </script>
+</body>
+</html>

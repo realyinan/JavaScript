@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(/a/.test('a'))
+        console.log('-----------------------------------')
+        // * 重复零次或更多次
+        console.log(/a*/.test(''))
+        console.log(/a*/.test('a'))
+        console.log(/a*/.test('aaa'))
+        console.log(/a*/.test('b'))
+        console.log('-----------------------------------')
+        // + 重复一次或更多次
+        console.log(/a+/.test(''))
+        console.log(/a+/.test('a'))
+        console.log(/a+/.test('aaa'))
+        console.log(/a+/.test('b'))
+        console.log('-----------------------------------')
+        // ? 重复一次或零次
+        console.log(/^a?$/.test(''))
+        console.log(/^a?$/.test('a'))
+        console.log(/^a?$/.test('aaa'))
+        console.log(/^a?$/.test('b'))
+        console.log('-----------------------------------')
+        // {n} 重复n次
+        console.log(/^a{6}$/.test(''))
+        console.log(/^a{6}$/.test('a'))
+        console.log(/^a{6}$/.test('aaa'))
+        console.log(/^a{6}$/.test('aaaa'))
+        console.log(/^a{6}$/.test('aaaaaa'))
+        console.log('-----------------------------------')
+        // {n,} 重复n次或更多次
+        console.log(/^a{3,}$/.test(''))
+        console.log(/^a{3,}$/.test('a'))
+        console.log(/^a{3,}$/.test('aaa'))
+        console.log(/^a{3,}$/.test('aaaa'))
+        console.log(/^a{3,}$/.test('aaaaaa'))
+        // {n,m} 重复n-m次
+        console.log(/^a{3,6}$/.test(''))
+        console.log(/^a{3,6}$/.test('aa'))
+        console.log(/^a{3,6}$/.test('aaa'))
+        console.log(/^a{3,6}$/.test('aaaa'))
+        console.log(/^a{3,6}$/.test('aaaaaa'))
+        console.log(/^a{3,6}$/.test('aaaaaaa'))
+    </script>
+</body>
+</html>

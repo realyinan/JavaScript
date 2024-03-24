@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            color: red;
+        }
+        .right {
+            color: green;
+        }
+        .red {
+            border: 1px solid red;
+        }
+        .green {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    请输入你的用户名：<input type="text">
+    <span></span>
+    <script>
+        let input = document.querySelector('input')
+        let span = input.nextElementSibling
+        input.addEventListener('blur', function () {
+            if (/^[a-zA-Z0-9-_]{6,16}$/.test(input.value)) {
+                span.className = 'right'
+                span.innerHTML = '输入正确'
+                this.className = 'green'
+            }
+            else {
+                span.className = 'error'
+                span.innerHTML = '输入错误'
+                this.className = 'red'
+            }
+        })
+    </script>
+</body>
+</html>

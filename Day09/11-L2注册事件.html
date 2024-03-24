@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮</button>
+    <script>
+        let btn = document.querySelector('button')
+        // 后面注册的事件不会覆盖前面注册的事件(同一个事件)
+        // 可以通过第三个参数去确定是在冒泡或者捕获阶段执行
+        // 匿名函数无法被解绑
+        // 必须使用removeEventListener(事件类型, 事件处理函数, 获取捕获或者冒泡阶段)
+
+
+        btn.addEventListener('click', add)
+        function add() {
+            alert('第一次')
+        }
+        btn.removeEventListener('click', add)
+        // btn.addEventListener('click', function() {
+        //     alert('第二次')
+        // })
+    </script>
+</body>
+</html>

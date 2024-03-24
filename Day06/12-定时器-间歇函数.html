@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 作用：每隔一段时间调用这个函数 间隔时间单位是毫秒
+        // 函数名字不需要加括号
+        // 定时器返回的是一个id数字
+        function show() {
+            console.log('月薪过万')
+        }
+        let timer = setInterval(show, 1000)
+
+        // 关闭定时器
+        clearInterval(timer)
+    </script>
+</body>
+</html>

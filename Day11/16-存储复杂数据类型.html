@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            name : '刘德华',
+            age : 50,
+            address : '香港'
+        }
+        // localStorage.setItem('obj', obj)  数据不能正常显示
+        // 复杂类型数据一定要转换为字符串
+        localStorage.setItem('obj', JSON.stringify(obj))
+        // 本地只能存储字符串,无法存储复杂数据类型.需要将复杂数据类型转换成JSON字符串,在存储到本地
+        // JSON.stringify(复杂数据类型)
+        // 将复杂数据转换成JSON字符串存储本地存储中
+
+        // JSON.parse(JSON字符串)
+        // 将JSON字符串转换成对象取出 时候使用
+        // JSON属性和值都是双引号
+
+        console.log(localStorage.getItem('obj'))  // 获取的是字符串，无法直接使用。
+        console.log(JSON.parse(localStorage.getItem('obj')))
+    </script>
+</body>
+</html

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>我是第1个小li</li>
+        <li>我是第2个小li</li>
+        <li>我是第3个小li</li>
+        <li>我是第4个小li</li>
+        <li>我是第5个小li</li>
+    </ul>
+    <script>
+        // 当一个元素的事件被触发时，同样的事件将会在该元素的所有祖先元素中依次被触发。这一过程被称为事件冒泡
+        // 不要每个li注册事件了，而是委托给它的父级
+        // 事件委托是给父级添加，而不是子级 根据事件冒泡
+        // 总结：
+        // 优点：给父级元素加事件（可以提高性能）
+        // 原理：事件委托其实是利用事件冒泡的特点， 给父元素添加事件，子元素可以触发
+        // 实现：事件对象.target 可以获得真正触发事件的元素
+
+        let ul = document.querySelector('ul')
+        ul.addEventListener('click', function (e) {
+            console.log(e.target)
+            e.target.style.color = 'pink'
+        })
+    </script>
+</body>
+</html>

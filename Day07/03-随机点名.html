@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 40px;
+            border: 1px solid pink;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button>点击点名</button>
+    <script>
+        // 1.获取元素
+        let box = document.querySelector('div')
+        let btn = document.querySelector('button')
+        // 2.随机函数
+        function getRandom(N, M) {
+            return Math.floor(Math.random() * (M - N + 1)) + N
+        }
+        // 声明一个数组
+        let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操']
+        // 3.事件监听
+        btn.addEventListener('click', function() {
+            let random = getRandom(0, arr.length-1)
+            box.innerHTML = arr[random]
+            arr.splice(random, 1)
+            if (arr.length === 0) {
+                btn.disabled = true
+            }
+        })
+    </script>
+</body>
+</html>

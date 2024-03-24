@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮</button>
+    <ul>
+        <li>元素</li>
+        <li class="test">元素</li>
+        <li>元素</li>
+        <li>元素</li>
+        <li>元素</li>
+    </ul>
+    <script>
+        // 1.获取元素
+        let btn = document.querySelector('button')
+        let test = document.querySelector('.test')
+        // 2.点击事件
+        btn.addEventListener('click', function () {
+            // test.style.color = 'red'
+            test.nextElementSibling.style.color = 'red'
+            test.previousElementSibling.style.color = 'skyblue'
+        })
+    </script>
+</body>
+</html>

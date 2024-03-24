@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // JavaScript 内置的一个用来让代码延迟执行的函数，叫 setTimeout
+        // setTimeout 仅仅只执行一次，所以可以理解为就是把一段代码延迟执行, 平时省略window
+        // 清除延时函数：clearTimeout
+        let btn = setTimeout(function () {
+            console.log(111)
+        }, 3000)
+        clearTimeout(btn)
+    </script>
+</body>
+</html>

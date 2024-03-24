@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 如果函数内部或者块级作用域内部，变量没有声明，直接赋值，也当全局变量看，但是强烈不推荐但是有一种情况，
+        // 函数内部的形参可以看做是局部变量。
+        function fun() {
+            num = 10
+        }
+        fun()
+        console.log(num)
+
+        function fun2(x, y) {
+            document.write(x + y)
+        }
+        console.log(x)
+    </script>
+</body>
+</html>

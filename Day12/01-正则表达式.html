@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 正则表达式（Regular Expression）是用于匹配字符串中字符组合的模式。常用来查找、替换那些符合正则表达式的文本。
+
+        // 定义正则表达式 reg里面存的是对象
+        let reg = /前端/
+
+        // test()方法用于判断是否有符合规则的字符串，返回的是布尔值 找到返回true，否则false
+        let result = reg.test('我正在学习前端')  // 
+        console.log(result)
+
+        // exec方法用于检索（查找）符合规则的字符串，找到返回数组，否则为null
+        let re = reg.exec('我们正在学习前端')
+        console.log(re)
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getArrMaxAndMin(arr) {
+            let max = min = arr[0]
+            for (let i = 1; i < arr.length; i++) {
+                if (max < arr[i]) {
+                    max = arr[i]
+                }
+                if (min > arr[i]) {
+                    min = arr[i]
+                }
+
+                // max < arr[i] ? max = arr[i] : max
+                // min > arr[i] ? min = arr[i] : min
+
+                // max = max < arr[i] ? arr[i] : max
+                // min = min > arr[i] ? arr[i] : min
+            }
+            return [max, min]
+        }
+
+        let result = getArrMaxAndMin([2, 7, 1, 6, 4])
+        document.write(`这个数组的最大值为${result[0]}，最小值为${result[1]}`)
+    </script>
+</body>
+</html>

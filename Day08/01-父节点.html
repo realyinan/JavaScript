@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="father">
+        <div class="son">子级</div>
+    </div>
+    <script>
+        // 父节点查找：parentNode 属性
+        // 返回最近一级的父节点 找不到返回为null
+        let son = document.querySelector('.son')
+        console.log(son.parentNode)
+        son.parentNode.style.display = 'none'
+    </script>
+</body>
+</html>

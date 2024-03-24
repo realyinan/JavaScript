@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fn(x, y) {
+            console.log(x + y)
+        }
+        // 实参个数小于形参
+        fn(1) // NaN
+
+        // 实参个数大于形参
+        fn(1, 2, 3)
+
+        function fn2() {
+            // arguments 伪数组只在函数内有效，少了一些pop()， push()等方法
+            console.log(arguments)
+            let sum = 0
+            for (let i = 1; i < arguments.length; i++) {
+                sum += arguments[i]
+            }
+            console.log(sum);
+        }
+        fn2([1, 2, 3])
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 形参：声明函数时写在函数名右边小括号里的叫形参（形式上的参数）
+        // 实参：调用函数时写在函数名右边小括号里的叫实参（实际上的参数）
+        // 形参可以理解为是在这个函数内声明的变量（比如 num1 = 10）实参可以理解为是给这个变量赋值
+        // 开发中尽量保持形参和实参个数一致
+        // 我们曾经使用过的 alert('打印'), parseInt('11'), Number('11') 本质上都是函数调用的传参
+        function getSum(num1, num2) {
+            document.write(num1 + num2)
+        }
+
+        function getSum_1(num) {
+            let sum = 0
+            for (let i = 1; i <= num; i++) {
+                sum += i
+            }
+            document.write(sum)
+        }
+
+        function getSum_2(start, end) {
+            let sum = 0
+            for (let i = start; i <= end; i++) {
+                sum += i
+            }
+            document.write(sum)
+        }
+        // getSum(2, 3)
+        // getSum(7, 8)
+        // getSum_1(1000)
+        getSum_2(20, 100)
+    </script>
+</body>
+</html>

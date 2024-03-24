@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+            overflow: auto;
+            padding: 10px;
+            border: 1px solid blue;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        他走了几天，走了许多天，他匆忙地走着，好像他想要在家里的人没有死完以前，赶回去似的。不过他没有对任何人说出他心中的渴望，谁也不会相信他心中的悲哀——一个人的心中所能感觉到的、最深的悲哀。这种悲哀是不需要世人了解的，因为它并不是有趣；也不需要朋友了解——而且他根本就没有朋友。他是一个陌生人，在一些陌生的国度里旅行，向家乡，向北国走去。他在许多年以前、从他父母接到的惟一的一封信里，有这样的话：“你和我们家里的人不一样，你不是一个纯粹的丹麦人。我们是太丹麦化了！你只喜欢陌生的国家！”这是他父母亲手写的——是的，他们最了解他！
+    </div>
+    <script>
+        let div = document.querySelector('div')
+        // 获取元素的内容总宽高（不包含滚动条）返回值不带单位
+        console.log(div.scrollWidth)   
+        console.log(div.scrollHeight)
+        // 获取元素的自身宽高、包含元素自身设置的宽高、padding、border 与内容无关
+        // offsetWidth和offsetHeight
+        console.log(div.offsetWidth)
+        console.log(div.offsetHeight)
+        // offsetLeft和offsetTop是只读属性
+        console.log(div.offsetTop)
+        console.log(div.offsetLeft)
+
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 全局变量：全局变量在任何区域都可以访问和修改
+        // 局部变量：局部变量只能在当前函数内部访问和修改
+        // 块级变量：let定义的变量,只能在块作用域里访问,不能跨块访问,也不能跨函数访问
+
+        // 全局变量
+        let num1 = 10
+        console.log(num1)
+
+        function fn() {
+            console.log(num1)
+        }
+
+        if (true) {
+            console.log(num1)
+        }
+
+        // 局部变量
+        function fun() {
+            let num2 = 10
+            console.log(num2)
+
+            function fn1() {
+                console.log(num2)
+                let num3 = 20
+            }
+            console.log(num3)
+        }
+        comsole.log(num2)
+
+        // 块级变量
+        if (true) {
+            let sum = 10
+        }
+        console.log(num) //不可以
+
+        for (let i = 1; i < 9; i++) {
+            console.log(i)
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://preview.redd.it/paulina-porizkova-v0-sojftn1co6gb1.jpg?auto=webp&s=8cfdc3bbb0a46970113c2d75045b59db7dc90a4c"><span>5</span>秒后跳转页面</a>
+    <script>
+        let a = document.querySelector('a')
+        let num = 5
+        let timer = setInterval(function () {
+            num--
+            a.innerHTML = `<span>${num}</span>秒后跳转页面`
+            if (num === 0) {
+                clearInterval(timer)
+                location.href = 'https://preview.redd.it/paulina-porizkova-v0-sojftn1co6gb1.jpg?auto=webp&s=8cfdc3bbb0a46970113c2d75045b59db7dc90a4c'
+            }
+        }, 1000)
+    </script>
+</body>
+</html>

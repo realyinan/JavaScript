@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮</button>
+    <script>
+        let btn = document.querySelector('button')
+        // 传统on注册 L0
+        // 同一个对象,后面注册的事件会覆盖前面注册(同一个事件)
+        // 都是冒泡阶段执行的
+
+        btn.onclick = function () {
+            alert('第一次')
+        }
+        
+        btn.onclick = function () {
+            alert('第二次')
+        }
+        // 解绑事件
+        btn.onclick = null
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 获取元素
+        let box = document.querySelector('div')
+        // 改变背景颜色
+        // 注意：1.修改样式通过style属性引出 2.如果属性有-连接符，需要转换为小驼峰命名法3.赋值的时候，需要的时候不要忘记加css单位
+        box.style.backgroundColor = 'hotpink'
+        box.style.width = '400px'
+        box.style.marginTop = '60px'
+    </script>
+</body>
+</html>

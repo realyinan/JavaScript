@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 转成数字类型 如果字符串内容里有非数字，转换失败时结果为 NaN（Not a Number）即不是一个数字。NaN也是number类型的数据，代表非数字
+        let num = '10'
+        console.log(Number(num))
+        // 只保留整数
+        console.log(parseInt(num))
+        // 只保留小数
+        console.log(parseFloat(10.11))
+        // 区别
+        console.log(Number('10.11abc'))
+        console.log(parseInt('10.11abc')) // 经常用于过滤单位
+        console.log(parseFloat('10.11abc')) 
+    </script>
+</body>
+</html>

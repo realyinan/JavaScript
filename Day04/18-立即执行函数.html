@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 立即执行，无需调用
+        // 第一个小括号放形参，第二个小括号放实参。
+        // 防止变量污染
+        // 多个立即执行函数必须加分号;
+        (function () {
+
+
+
+
+        })()
+
+        (function () {})()
+        (function (x, y) {
+            console.log(x + y)
+        })(1, 2)
+        (function () {
+            
+        }())
+    </script>
+</body>
+</html>
